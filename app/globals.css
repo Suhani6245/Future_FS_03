@@ -1,0 +1,53 @@
+@import "tailwindcss";
+body {
+  background-image: url('/space-bg.jpg'); /* Replace with actual path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+/* Tailwind 3 or custom class */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@keyframes kinetic {
+  0% {
+    transform: translateY(0%);
+  }
+  33% {
+    transform: translateY(-100%);
+  }
+  66% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* app/globals.css */
+
+/* Hide scrollbar globally */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none;
+}
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+
