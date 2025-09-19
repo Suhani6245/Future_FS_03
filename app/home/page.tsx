@@ -142,8 +142,16 @@ function MissionModal({ mission, onClose }: { mission: any; onClose: () => void 
 }
 
 // 🌐 Home Page
+type Mission = {
+  title: string;
+  image: string;
+  extraImage: string;
+  description: string;
+  details: string;
+};
+
 export default function HomePage() {
-  const [selectedMission, setSelectedMission] = useState(null);
+  const [selectedMission, setSelectedMission] = useState<Mission | null>(null);
 
   useEffect(() => {
     document.title = 'ISRO ReImagined - Home';
